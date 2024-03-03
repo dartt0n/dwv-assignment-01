@@ -5,6 +5,7 @@ description = "Add your description here"
 requires-python = ">=3.12"
 dependencies = [
     "dash>=2.18.2",
+    "gunicorn>=23.0.0",
     "pandas>=2.2.3",
     "plotly>=6.0.0",
     "pymongo>=4.11.1",

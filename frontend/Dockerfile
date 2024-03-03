@@ -5,4 +5,4 @@ COPY uv.lock pyproject.toml /app/
 RUN --mount=type=cache,target=/root/.cache/uv uv sync --frozen --no-install-project --no-dev
 COPY . /app
 RUN --mount=type=cache,target=/root/.cache/uv uv sync --frozen --no-dev
-CMD ["uv", "run", "main.py"]
+CMD ["uv", "run", "gunicorn", "--bind", "0.0.0.0:8050", "main:server"]
